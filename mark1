@@ -20,7 +20,7 @@ String regex = "^[a-z][a-zA-Z_1-9\\u4e00-\\u9fa5]{1,5}$";
 [a-zA-Z_1-9\\u4e00-\\u9fa5]{1,5}$ 表示1-5位中英文，及下划线结尾，加上开头一共为2-6位
 \\u4e00-\\u9fa5  表示中文
 
-十一：桌面快捷方式
+十一：minit桌面快捷方式
 文件夹：/home/xxx/.local/share/applications
 
 十二：mongodb操作
