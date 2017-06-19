@@ -6,3 +6,6 @@ http://www.cnblogs.com/byteworld/p/5963112.html
 
 3.npm install -g npm
 安装最新npm版本
+
+4. 简单比较 getName()、getCanonicalName()、getSimpleName() 的异同
+http://blog.csdn.net/jusang486/article/details/37879009
