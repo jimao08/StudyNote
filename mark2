@@ -1,0 +1,127 @@
+1:泛型方法
+
+private <T> T findObject(String sql, String[] params,RowMapper<T> mapper) {
+        final List<T> results = ucenterJdbcTemplate.query(sql,params, mapper);
+        T ret = null;
+        if (results != null && results.size() > 0) {
+            ret = results.get(0);
+        }
+        return ret;
+    }
+
+
+2： HTTP协议和HTTPS协议初探
+http://blog.csdn.net/yangshangwei/article/details/50960359
+
+3：邮箱正则表达式
+http://zhidao.baidu.com/link?url=riHHnAwC6VdU3JONFA8226w7mc9cLjXCZyzD1R2sEwnCocGKoX-s_0ahCpvr0G2PjB30Pi37EXhSvN6gVMS7Wp6Fs-aYUia7x1glqDnGCMC
+
+4:获取ip
+http://my.oschina.net/fuweiwei/blog/299316?p=1
+
+5:date format
+DateFormatUtils.format(System.currentTimeMillis(),"yyMMdd");
+
+6:redis zset
+http://blog.csdn.net/mingtianhaiyouwo/article/details/51901588
+
+7:IntStream DoubleStream LongStream
+IntStream.of(ivals).average().getAsDouble()
+
+8. in
+ Query query = new Query();
+        //通过id批量获取
+        query.addCriteria(Criteria.where("id").in(ids));
+
+9.controller,service,dao 分层，意义
+按理说，业务逻辑是在service中写的。controller只是起到了一个请求转发的功能。
+但实际开发中，还是看程序员自己的逻辑。
+通常开发中，我们都是建议，dao只做原子操作，增删改查。
+业务逻辑放在service，这里就可能用到多个dao，如何需要事物控制，这里还需配置事物。
+controller负责请求转发，接受页面过来的参数，传给service处理，接到返回值，再传给页面。
+有一点说明一下，service会调用其他模块的dao其实是正常的，不算代码重复。
+
+
+10.redis有序集合原理
+http://redisbook.com/preview/object/sorted_set.html
+
+redis设计与实现
+http://redisbook.com/index.html
+
+有序集合的成员是唯一的，分数可以重复
+zadd key score member 添加
+zsem key member 删除
+
+十一：mongo  %abc%
+db.getCollection('xxx').find({"stem":/中国的抗日战争与同时期各国/})
+
+十二：有意思的代码
+https://www.zhihu.com/question/37760140
+
+十三：idea代码格式化
+ctrl+shift+f
+
+十四：注意"abc".equals(str) 与 str.equals("abc")的区别
+前者不需要判空
+
+十五：b是a的子类，某方法对数据进行处理，流程大部分一样，b多一些操作，该怎么办？
+
+十七：正则表达式 包含某字符
+.*[字符].*
+
+十八：注解annotation
+http://blog.csdn.net/laixiaonian/article/details/8814100
+http://www.infoq.com/cn/articles/cf-java-annotation/
+http://www.cnblogs.com/linjiqin/archive/2011/02/16/1956426.html
+
+十九：linux
+history的条数————》sudo vim /etc/bash.bashrc
+立即生效 source /etc/profile
+
+二十：curl post
+curl  -H 'token: e3bb506247a44689b77db970898c12b7' -H 'terminal: 1' -d "pointId=392"  http://192.168.100.22/p/v1/practices/customizes
+
+二十一：JVM启动参数
+JAVA -Xms与-Xmx区别
+http://blog.csdn.net/yangxin114/article/details/3970725
+
+JAVA启动参数整理
+http://blog.csdn.net/turkeyzhou/article/details/7619472
+
+JVM优化系列之一（-Xss调整Stack Space的大小）
+http://www.blogjava.net/chenhui7502/archive/2011/08/18/356755.html
+
+二十二：正则表达式，非贪婪模式
+http://tieba.baidu.com/p/2330283472
+
+(^.+?abc)或(^.*?abc)
+当？字符紧跟在任何一个其他限制符 (*, +, ?, {n}, {n,}, {n,m}) 后面时，匹配模式是非贪婪的。非贪婪模式尽可能少的匹配所搜索的字符串，而默认的贪婪模式则尽可能多的匹配所搜索的字符串。例如，对于字符串 "oooo"，'o+?' 将匹配单个 "o"，而 'o+' 将匹配所有 'o'。
+
+
+二十三：数据库编码
+
+二十四：lambda
+
+http://www.cnblogs.com/feichexia/archive/2012/11/15/Java8_LambdaExpression.html
+
+
+二十五：[Google Guava] 3-缓存
+http://ifeve.com/google-guava-cachesexplained/
+
+二十六：redis通配符
+redisTemplate.keys("a*5")
+
+二十七；scp上传和下载
+上传：
+scp (-P 端口号) 本地 服务器
+下载：
+scp 服务器/文件 本地目录
+
+二十八：简化你的 java map 操作：Guava 之 Multimap 用法简介
+http://www.tuicool.com/articles/UZVBby
+
+二十九：强制关掉进程
+kill -9 进程号
+
+三十： HTTP协议之multipart/form-data请求分析
+http://blog.csdn.net/five3/article/details/7181521

@@ -1,0 +1,174 @@
+1:io流
+file:
+isDirectory 是否为目录
+listFiles 列出目录下的所有文件/文件夹
+mkdir 创建目录，需要用户权限
+mkdirs 创建目录和父目录，需要用户权限
+
+
+inputStream：
+available   返回文件大小
+markSupported  判断是否支持mark，reset方法
+mark reset skip
+
+输入流的多次读取：
+第一种方法：request.getInputStream()
+第二种方法：使用BufferedOutputStream，BufferedInputStream，ByteArrayOutputStream这样的缓存
+
+2:常见的MIME类型
+http://www.cnblogs.com/flyjs/archive/2012/02/20/2360521.html
+
+
+3:
+文件上传主要参考代码
+
+4:scp进阶
+http://www.cnblogs.com/hitwtx/archive/2011/11/16/2251254.html
+
+
+5:switch语句
+用string来判断的方法不佳，使用int类型更好一些
+
+6.二维码参考代码
+http://kesun-shy.iteye.com/blog/2154169
+
+7：DNS修改 223.5.5.5
+
+vim /etc/resolv.conf
+
+8.excel读取、写入
+https://my.oschina.net/u/147181/blog/306010
+http://www.cnblogs.com/huajiezh/p/5467821.html
+
+9.poi xwpf
+https://poi.apache.org/document/quick-guide-xwpf.html
+
+10.重要文件不要放在tmp文件下！！！！
+
+11.jdbc
+update方法返回受影响的行数
+execute方法只执行
+
+12.apache maven 消息摘要，md5，sha1
+
+<dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>1.10</version>
+</dependency>
+
+13.
+相似度算法的例子
+http://www.programgo.com/article/1383402235/
+
+http://blog.csdn.net/caiandyong/article/details/44245647s
+
+14.Restful
+http://blog.jobbole.com/41233/
+http://www.ruanyifeng.com/blog/2011/09/restful
+
+15.多任务环境下各任务间共享的标志都应该加volatile修饰
+一般说来，volatile用在如下的几个地方：
+1、中断服务程序中修改的供其它程序检测的变量需要加volatile；
+2、多任务环境下各任务间共享的标志应该加volatile；
+3、存储器映射的硬件寄存器通常也要加volatile说明，因为每次对它的读写都可能有不同意义；
+
+另外，以上这几种情况经常还要同时考虑数据的完整性（相互关联的几个标志读了一半被打断了重写），在1中可以通过关中断来实现，2 中可以禁止任务调度，3中则只能依靠硬件的良好设计了。
+
+16.InetAddress类和InetSocketAddress的使用有什么区别
+https://www.zhihu.com/question/42308079
+
+17.zlib压缩
+http://snowolf.iteye.com/blog/465433
+
+18.mark reset的用法
+http://www.cnblogs.com/zhang-qiang/articles/2050885.html
+
+19.nio介绍
+http://www.iteye.com/magazines/132-Java-NIO
+
+与Selector一起使用时，Channel必须处于非阻塞模式下。这意味着不能将FileChannel与Selector一起使用，因为FileChannel不能切换到非阻塞模式。而套接字通道都可以。
+
+
+20.RandomAccessFile介绍
+http://blog.csdn.net/czplplp_900725/article/details/37809579
+
+http://blog.csdn.net/akon_vm/article/details/7429245
+
+22.
+ 整数集合(intset)是集合键的底层实现之一，当一个集合只包含整数值元素，并且这个集合的元素数量不多时，Redis就会使用整数集合作为集合键的底层实现。
+
+23.
+Redis内部数据结构详解(5)——quicklist
+http://blog.csdn.net/a809146548/article/details/52013225
+
+24.mongo client配置参数介绍
+http://blog.csdn.net/freebird_lb/article/details/8229567
+
+25.jdk 排序
+http://blog.sina.com.cn/s/blog_8e6f1b330101h7fa.html
+
+26.自增字段默认值
+alter table users AUTO_INCREMENT=123456;  只能设置为大于（或等于？）当前默认值的值
+TRUNCATE 命令自动将自增默认值设置为0；
+
+27.注意json与map的关系
+
+28.lsof -i:11467
+
+29.
+db.getCollection('xxx').aggregate([{$match:{userId:12252065,createTime:{$gte:1477929600000}}},{$group:{_id:null,ret:{$sum:"$expendTime"}}}])
+
+30.
+string 的match方法的匹配
+
+31. ssh 密钥
+http://www.asheep.cn/skill/git-ssh-key.html
+
+32.json问题
+http://www.tuicool.com/articles/aaqMfa7
+
+33.lambda
+https://www.ibm.com/developerworks/cn/java/j-lo-java8streamapi/
+
+34.mysql 日期时间格式化
+http://www.w3school.com.cn/sql/func_date_format.asp
+date_format(now(),'%Y-%m-%d %H-%i-%s')
+
+FROM_UNIXTIME(BB103, '%Y-%m-%d %h:%i:%s') 时间戳（秒）转日期
+
+35. 查看端口
+netstat -anp | grep redis
+
+36.
+data.put("subIds", StringUtils.join(compositeQuestion.getQuestions(), ","));
+
+
+37.
+用URLEncoder.encode对请求url的参数编码
+
+38.注意遍历集合元素中，删除某一类元素的写法
+用removeif方法
+或iterator遍历
+
+39.Collections.unmodifiableList方法返回无法改变的list
+map.getOrDefault(key,default) 如果key没有对应的value，返回default
+
+40.
+Java HttpClient使用小结
+http://blog.csdn.net/bhq2010/article/details/9210007
+
+41.sort -t = -k3 -n -r
+
+-t 用=分割
+-k3 第三列排序
+-n 数字排序
+-r 倒序
+
+42.mvn打包命令
+mvn clean package -Dmaven.test.skip=true -U
+
+
+43.
+bower版本前缀说明
+https://docs.npmjs.com/misc/semver

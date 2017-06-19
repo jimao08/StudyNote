@@ -1,0 +1,85 @@
+四：terminal下载
+wget 下载地址
+
+九：git使用方法
+相关教程：
+http://blog.it985.com/753.html
+http://www.yiibai.com/git/git_push_operation.html
+http://www.oschina.net/question/31384_157479
+
+基本操作：
+删除远程分支 git push origin :branch-name
+添加远程分支 git push origin xxx-branch
+切换分支 git checkout abc
+删除本地分支 git branch -d abc
+
+
+十：正则表达式
+String regex = "^[a-z][a-zA-Z_1-9\\u4e00-\\u9fa5]{1,5}$";
+^[a-z] 表示a-z开头
+[a-zA-Z_1-9\\u4e00-\\u9fa5]{1,5}$ 表示1-5位中英文，及下划线结尾，加上开头一共为2-6位
+\\u4e00-\\u9fa5  表示中文
+
+十一：桌面快捷方式
+文件夹：/home/xxx/.local/share/applications
+
+十二：mongodb操作
+Query query = new Query(criteria);
+        query.skip(startPage*pageSize);
+        query.limit(pageSize);
+        query.with(new Sort(Sort.Direction.DESC,"year"));
+return mongoTemplate.find(query,Paper.class);
+
+十三：敏感词过滤算法
+http://www.oschina.net/question/113867_28125
+
+十四：接口的兼容/扩展
+
+十五：日历/日期	yyyy-MM-dd HH:mm:ss
+Calendar calendar = Calendar.getInstance();
+        calendar.setTime(date);
+        calendar.set(Calendar.YEAR, 2056);
+        System.out.println(calendar.get(Calendar.YEAR));
+        int maxDay = calendar.getActualMaximum(Calendar.DAY_OF_MONTH);
+        System.out.println(maxDay);
+
+        calendar.set(Calendar.DAY_OF_MONTH, maxDay);
+
+十六：启动后执行某个方法
+http://www.cnblogs.com/rollenholt/p/3612440.html  InitializingBean
+
+十七：StringUtils.trimToEmpty，如果字符串为空，变成""
+
+十八：List 数组转换,Arrays静态方法
+Arrays.asList， Arrays.toList
+
+十九：FileUtils读取文件，返回String
+
+            File file = new File(filePath);
+            FileReader fileReader = new FileRea	der(file);
+
+            char[] chars = new char[64];
+            int tmp = 0;
+            StringBuilder stringBuilder = new StringBuilder();
+
+            while ((tmp = fileReader.read(chars)) != -1) {
+                stringBuilder.append(chars, 0 , tmp);
+            }
+
+------>
+	String ret = FileUtils.readFileToString(new File(filePath));
+
+
+二十三：保留小数点后位数
+BigDecimal bigDecimal = new BigDecimal(value);
+        System.out.println(bigDecimal.setScale(1, BigDecimal.ROUND_HALF_UP));
+
+		BigDecimal(value * 100).divide(.....)
+	BigDecimal(value).divide(>...).doubleValue() * 100
+效果不一样
+
+二十四：常见端口号
+mongodb : 27107
+doboo : 20880
+redis : 6379
+
