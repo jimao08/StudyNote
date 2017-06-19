@@ -44,6 +44,7 @@ http://www.cnblogs.com/huajiezh/p/5467821.html
 https://poi.apache.org/document/quick-guide-xwpf.html
 
 10.重要文件不要放在tmp文件下！！！！
+(系统重启后tmp下面的文件可能被清空)
 
 11.jdbc
 update方法返回受影响的行数
