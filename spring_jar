@@ -1,0 +1,18 @@
+1.javax null
+http://www.java2s.com/Code/Jar/j/Downloadjsr305132jar.htm
+
+2.reactor
+
+<dependency>
+            <groupId>io.projectreactor</groupId>
+            <artifactId>reactor-core</artifactId>
+            <version>3.0.7.RELEASE</version>
+</dependency>
+
+3.servlet
+javax.servlet-api-4.0.0-b07
+
+4.logging
+commons-logging-1.2
+
+
