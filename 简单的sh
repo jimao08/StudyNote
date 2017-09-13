@@ -3,7 +3,7 @@ if [ ! -n "$1" ] ;then
 else
     echo "you input is $1"
 git checkout $1
-cd question-common
+cd xx-common
 mvn clean deploy
 cd ../xx-web-server
 mvn clean deploy
