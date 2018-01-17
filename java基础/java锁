@@ -1,0 +1,5 @@
+1.java 中的锁 -- 偏向锁、轻量级锁、自旋锁、重量级锁
+https://www.jianshu.com/p/78cf35f01b2f
+
+2.Thread的中断机制(interrupt)
+https://www.cnblogs.com/onlywujun/p/3565082.html
