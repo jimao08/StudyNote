@@ -3,3 +3,9 @@ https://www.jianshu.com/p/78cf35f01b2f
 
 2.Thread的中断机制(interrupt)
 https://www.cnblogs.com/onlywujun/p/3565082.html
+
+3.线程高级篇-Lock锁和Condition条件
+https://www.cnblogs.com/Wanted-Tao/p/6378942.html
+
+4. Java线程(九)：Condition-线程通信更高效的方式
+http://blog.csdn.net/ghsau/article/details/7481142
