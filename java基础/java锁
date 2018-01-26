@@ -9,3 +9,10 @@ https://www.cnblogs.com/Wanted-Tao/p/6378942.html
 
 4. Java线程(九)：Condition-线程通信更高效的方式
 http://blog.csdn.net/ghsau/article/details/7481142
+
+5.java线程阻塞中断和LockSupport的常见问题
+https://yq.aliyun.com/articles/14680?spm=5176.100239.yqblog1.108.1I0Dhi
+
+6.Java的LockSupport.park()实现分析
+
+http://blog.csdn.net/hengyunabc/article/details/28126139
