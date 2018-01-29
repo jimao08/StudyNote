@@ -16,3 +16,15 @@ https://yq.aliyun.com/articles/14680?spm=5176.100239.yqblog1.108.1I0Dhi
 6.Java的LockSupport.park()实现分析
 
 http://blog.csdn.net/hengyunabc/article/details/28126139
+
+
+7.深入理解ReentrantLock
+https://www.cnblogs.com/zhimingyang/p/5702752.html
+
+8.java并发之ReentrantLock--->公平锁的理解
+https://www.jianshu.com/p/4836a641f6c4
+
+9.源码|并发一枝花之ReentrantLock与AQS（1）：lock、unlock
+https://monkeysayhi.github.io/2017/12/05/%E6%BA%90%E7%A0%81%7C%E5%B9%B6%E5%8F%91%E4%B8%80%E6%9E%9D%E8%8A%B1%E4%B9%8BReentrantLock%E4%B8%8EAQS%EF%BC%881%EF%BC%89%EF%BC%9Alock%E3%80%81unlock/
+
+
