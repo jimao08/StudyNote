@@ -1,3 +1,18 @@
 1.攻破JAVA NIO技术壁垒
 
 http://www.importnew.com/19816.html
+
+2.关于 NIO 你不得不知道的一些“地雷”
+
+https://www.jianshu.com/p/1af407c043cb
+
+3.NIO的写操作分析
+
+http://blog.csdn.net/iter_zc/article/details/39291129
+
+4.Java NIO系列教程（六） Selector
+
+http://ifeve.com/selectors/
+
+5.nio SelectionKey.OP_WRITE 的问题
+http://blog.csdn.net/qq_33245923/article/details/68063342
