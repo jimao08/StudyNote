@@ -1,3 +1,6 @@
 1.zookeeper ZAB协议 Follower和leader源码分析
 
 https://www.cnblogs.com/biterror/p/7147448.html
+
+2.ZooKeeper日志与快照文件简单分析
+http://www.solinx.co/archives/448
